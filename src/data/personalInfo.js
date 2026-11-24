@@ -1,0 +1,33 @@
+export const personalInfo = {
+  name: "Gowtham K",
+  initials: "GK",
+  title: "Full Stack Developer",
+  titles: ["Full Stack Developer", "MERN Stack Developer", "Software Engineer"],
+  tagline: "Full Stack Developer & Problem Solver",
+  bio: "I am a B.Tech Information Technology student at Sri Eshwar College of Engineering with hands-on experience in full-stack development, data engineering, and building real-world web applications. I enjoy developing scalable applications, solving technical problems, and creating clean, user-friendly digital experiences.",
+  bioLong: `I am a B.Tech Information Technology student at Sri Eshwar College of Engineering with a strong foundation in full-stack development, data structures, algorithms, and database management.\n\nI have hands-on experience developing web applications through internships and academic projects. I enjoy transforming ideas into functional products using modern technologies.\n\nI am continuously improving my technical skills and looking forward to contributing to innovative software engineering projects.`,
+  supporting: "Building scalable web applications and data-driven solutions with modern technologies.",
+  goal: "Software Engineer / Full Stack Developer",
+  location: "Coimbatore, India",
+  email: "gowtham.k2023it@sece.ac.in",
+  phone: "+91-7373692501",
+  linkedin: "https://linkedin.com/in/gowtham-k-0577a131a",
+  github: "https://github.com/gowthamk2503",
+  education: {
+    degree: "B.Tech Information Technology",
+    college: "Sri Eshwar College of Engineering",
+    period: "2023–2027",
+    cgpa: "8.22/10",
+  },
+  stats: [
+    { label: "Featured Projects", value: "3", suffix: "" },
+    { label: "Internship Experiences", value: "2", suffix: "" },
+    { label: "LeetCode Problems", value: "200", suffix: "+" },
+    { label: "SkillRack Problems", value: "250", suffix: "+" },
+    { label: "CGPA", value: "8.22", suffix: "" },
+  ],
+  heroTechStack: ["React.js", "Node.js", "Express.js", "MongoDB", "Python", "C++", "AWS"],
+  footerTagline: "BUILD THOUGHTFULLY. DESIGN BEAUTIFULLY. ENGINEER IMPACT.",
+  resumeUrl: "/resume.pdf",
+};
+

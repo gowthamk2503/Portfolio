@@ -1,0 +1,120 @@
+export const projects = [
+  {
+    id: "trackzone",
+    title: "TrackZone",
+    subtitle: "Geofencing & Biometric Attendance System",
+    liveUrl: "https://trackzone-two.vercel.app/login",
+    githubUrl: "https://github.com/gowthamk2503/Trackzone",
+    status: "Live",
+    description:
+      "Developed a full-stack attendance management system that validates attendance using GPS-based geofencing and biometric authentication.",
+    longDescription:
+      "TrackZone is an enterprise-grade attendance management platform that combines GPS-based geofencing with WebAuthn biometric authentication to ensure tamper-proof attendance recording. The system uses the Haversine algorithm for precise location verification and implements Role-Based Access Control for secure multi-role management.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "JWT", "WebAuthn"],
+    features: [
+      "GPS-based geofencing with Haversine algorithm",
+      "WebAuthn biometric authentication",
+      "JWT authentication & bcrypt password security",
+      "Role-Based Access Control (RBAC)",
+      "Real-time location verification",
+      "Attendance management dashboard",
+      "Admin & student role separation",
+      "Secure session management",
+    ],
+    problemStatement:
+      "Traditional attendance systems are prone to proxy attendance and manual errors, making it difficult to maintain accurate records in educational and corporate environments.",
+    solution:
+      "TrackZone solves this by combining GPS geofencing with biometric authentication, ensuring that attendance is only marked when the user is physically present at the designated location and verified through biometrics.",
+    architecture: "Three-tier architecture: React.js frontend, Node.js/Express.js RESTful API backend, MongoDB database with JWT-secured communication.",
+    workflow: [
+      "User logs in with credentials (bcrypt-hashed passwords)",
+      "System verifies biometric identity via WebAuthn",
+      "GPS coordinates captured and verified against geofence boundary",
+      "Haversine algorithm calculates distance precision",
+      "Attendance recorded in MongoDB with timestamp",
+      "Admin dashboard shows real-time attendance reports",
+    ],
+    color: "#6425E8",
+    gradient: "from-purple-500 to-indigo-600",
+    emoji: "📍",
+  },
+  {
+    id: "rentaro",
+    title: "Rentaro",
+    subtitle: "Car Rental Management System",
+    liveUrl: "https://rentaromain.vercel.app/",
+    githubUrl: "https://github.com/gowthamk2503/Rentaro",
+    status: "Live",
+    description:
+      "Built a full-stack car rental platform with vehicle listings, booking workflows, and rental management for customers and administrators.",
+    longDescription:
+      "Rentaro is a comprehensive car rental management platform that streamlines the entire rental lifecycle — from vehicle discovery to booking confirmation and fleet management. The platform features Google OAuth integration for seamless authentication and a dual-panel system for customers and administrators.",
+    technologies: ["React.js", "Node.js", "Express.js", "MongoDB", "REST APIs", "Google Login API"],
+    features: [
+      "Vehicle listings with filters and search",
+      "Complete car booking workflow",
+      "Google OAuth authentication",
+      "Customer management system",
+      "Admin dashboard for fleet management",
+      "Real-time availability tracking",
+      "Booking history and invoices",
+      "REST API integration",
+    ],
+    problemStatement:
+      "Car rental businesses often struggle with inefficient booking systems, manual tracking, and lack of digital customer management, leading to poor customer experience.",
+    solution:
+      "Rentaro provides a unified digital platform for car rentals with an intuitive booking flow, automated availability management, and comprehensive admin controls.",
+    architecture: "MERN stack with Google OAuth2 integration. React.js SPA frontend communicating with Express.js REST API backed by MongoDB Atlas.",
+    workflow: [
+      "User authenticates via Google Login or email",
+      "Browse available vehicles with real-time filters",
+      "Select vehicle and choose rental dates",
+      "Booking confirmation with automated availability update",
+      "Admin manages fleet and reviews bookings",
+      "Customer accesses booking history and invoices",
+    ],
+    color: "#8B5CF6",
+    gradient: "from-violet-500 to-purple-600",
+    emoji: "🚗",
+  },
+  {
+    id: "civictrack",
+    title: "CivicTrack",
+    subtitle: "Citizen Feedback on Road Maintenance System",
+    liveUrl: null,
+    githubUrl: "https://github.com/gowthamk2503/CivicTrack",
+    status: "Repository Available",
+    description:
+      "Developed a web application that allows citizens to report road maintenance issues with images, descriptions, and location-based mapping.",
+    longDescription:
+      "CivicTrack is a civic-tech platform that empowers citizens to report road maintenance issues to local authorities. The system features image uploads, location tagging, issue tracking, and an admin dashboard with analytics to prioritize and resolve reported issues efficiently.",
+    technologies: ["Python", "Flask", "HTML", "CSS", "JavaScript", "Bootstrap", "MongoDB", "SQLite"],
+    features: [
+      "Road issue reporting with image uploads",
+      "Location-based mapping and geo-tagging",
+      "Admin dashboard for issue management",
+      "Issue status tracking and updates",
+      "Analytics and resolution management",
+      "Citizen notifications on status changes",
+      "Priority-based issue categorization",
+      "Responsive Bootstrap UI",
+    ],
+    problemStatement:
+      "Citizens often have no easy way to report road damage and infrastructure issues to local authorities, leading to delayed repairs and poor urban infrastructure management.",
+    solution:
+      "CivicTrack provides a simple, accessible reporting platform where citizens can submit issues with photos and location data, and authorities can track, prioritize, and resolve them through an admin dashboard.",
+    architecture: "Python Flask backend with dual database strategy — MongoDB for issue reports with images, SQLite for user data and authentication. Bootstrap-powered responsive frontend.",
+    workflow: [
+      "Citizen registers and logs in securely",
+      "Reports road issue with photo and description",
+      "System tags location via geolocation API",
+      "Admin receives and categorizes the issue",
+      "Issue assigned priority and resolution team",
+      "Status updates sent to reporting citizen",
+      "Analytics dashboard shows resolution metrics",
+    ],
+    color: "#6425E8",
+    gradient: "from-indigo-500 to-purple-600",
+    emoji: "🛣️",
+  },
+];

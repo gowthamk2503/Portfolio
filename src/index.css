@@ -1,0 +1,135 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #F7F6F2;
+    color: #171717;
+    font-family: 'Manrope', sans-serif;
+  }
+
+  .dark body {
+    background-color: #111110;
+    color: #F7F6F2;
+  }
+
+  /* Custom minimal scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(119, 115, 111, 0.3);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7057F5;
+  }
+}
+
+@layer components {
+  /* Editorial Headings */
+  .editorial-title {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.03em;
+    line-height: 1.05;
+  }
+
+  .editorial-serif {
+    font-family: 'Instrument Serif', serif;
+    font-style: italic;
+    font-weight: 400;
+  }
+
+  .editorial-pill {
+    @apply inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full text-xs font-mono tracking-wide uppercase;
+  }
+
+  /* Editorial Card */
+  .editorial-card {
+    @apply bg-white dark:bg-dark-card border border-border-subtle dark:border-dark-border rounded-3xl transition-all duration-300;
+  }
+
+  .editorial-card:hover {
+    @apply shadow-float border-charcoal/20 dark:border-white/20;
+  }
+
+  /* Pill Navigation */
+  .nav-capsule {
+    @apply backdrop-blur-xl bg-white/80 dark:bg-dark-card/80 border border-border-subtle/80 dark:border-dark-border/80 shadow-capsule dark:shadow-capsule-dark;
+  }
+
+  /* Custom Buttons */
+  .btn-editorial-primary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-charcoal text-white dark:bg-white dark:text-charcoal font-medium text-sm transition-all duration-300 hover:bg-electric-violet dark:hover:bg-soft-lime dark:hover:text-charcoal hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-editorial-secondary {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-white dark:bg-dark-card text-charcoal dark:text-dark-text border border-border-subtle dark:border-dark-border font-medium text-sm transition-all duration-300 hover:border-charcoal dark:hover:border-white hover:scale-[1.02] active:scale-[0.98];
+  }
+
+  .btn-editorial-accent {
+    @apply inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-full bg-electric-violet text-white font-medium text-sm transition-all duration-300 hover:bg-charcoal hover:scale-[1.02] active:scale-[0.98];
+  }
+}
+
+@layer utilities {
+  /* Subtle grain / noise overlay */
+  .bg-noise {
+    background-image: radial-gradient(rgba(23, 23, 23, 0.04) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  .dark .bg-noise {
+    background-image: radial-gradient(rgba(247, 246, 242, 0.05) 1px, transparent 0);
+    background-size: 24px 24px;
+  }
+
+  /* Minimal border grid */
+  .bg-grid-minimal {
+    background-size: 40px 40px;
+    background-image: 
+      linear-gradient(to right, rgba(231, 228, 222, 0.4) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(231, 228, 222, 0.4) 1px, transparent 1px);
+  }
+
+  .dark .bg-grid-minimal {
+    background-image: 
+      linear-gradient(to right, rgba(44, 43, 41, 0.5) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(44, 43, 41, 0.5) 1px, transparent 1px);
+  }
+}
+
+/* Scroll progress bar */
+.scroll-progress-line {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 2.5px;
+  background: linear-gradient(90deg, #7057F5 0%, #B5A0FF 50%, #D9F86A 100%);
+  z-index: 100;
+  transition: width 0.1s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+/* Reduced motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-delay: -1ms !important;
+    animation-duration: 1ms !important;
+    animation-iteration-count: 1 !important;
+    background-attachment: initial !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0s !important;
+    transition-delay: 0s !important;
+  }
+}
